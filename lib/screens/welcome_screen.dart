@@ -1,4 +1,5 @@
 import 'package:courseapp/widgets/customScaffold.dart';
+import 'package:courseapp/widgets/welcomeButton.dart';
 import 'package:flutter/material.dart';
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({super.key});
@@ -10,7 +11,8 @@ class WelcomeScreen extends StatelessWidget {
       Column(
         children: [
           Padding(padding : EdgeInsets.symmetric(vertical: 40) ,),
-          Flexible(child:
+          Flexible(
+          flex: 8,child:
           Container(
             padding: EdgeInsets.symmetric(
               vertical: 0,
@@ -58,12 +60,20 @@ class WelcomeScreen extends StatelessWidget {
                   ),
               )
           )),
-          // Flexible(child: Text('Welcome'))
-          Row(
-            children: [
-              Text('Welcome'),
-              Text('Welcome')
-            ],
+          Flexible( flex: 1,child:
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Row(
+                  children: [
+                    Expanded(child:
+                      SignButton(textButton:  'Sign In')
+                    ),
+                    Expanded(child:
+                      SignButton(textButton: 'Sign Up')
+                    )
+                  ],
+                ),
+              )
           )
         ],
       ),
