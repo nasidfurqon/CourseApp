@@ -22,7 +22,7 @@ class SignButton extends StatelessWidget {
           )
         ),
         child: Padding(
-          padding: EdgeInsets.all(10),
+          padding: EdgeInsets.all(20),
           child: Text(textButton!,
             textAlign: TextAlign.center,
             style: TextStyle(
