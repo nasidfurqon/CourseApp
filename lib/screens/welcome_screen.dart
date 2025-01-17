@@ -1,3 +1,5 @@
+import 'package:courseapp/screens/login_screen.dart';
+import 'package:courseapp/screens/signup_screen.dart';
 import 'package:courseapp/widgets/customScaffold.dart';
 import 'package:courseapp/widgets/welcomeButton.dart';
 import 'package:flutter/material.dart';
@@ -66,10 +68,12 @@ class WelcomeScreen extends StatelessWidget {
                 child: Row(
                   children: [
                     Expanded(child:
-                      SignButton(textButton:  'Sign In')
+                      SignButton(textButton:  'Sign In',
+                      onTap: LoginScreen(),)
                     ),
                     Expanded(child:
-                      SignButton(textButton: 'Sign Up')
+                      SignButton(textButton: 'Sign Up',
+                      onTap: SignupScreen(),)
                     )
                   ],
                 ),
