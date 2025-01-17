@@ -5,8 +5,68 @@ class WelcomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Customscaffold(
-      child: Text('Welcom'),
+    return Customscaffold(
+      child:
+      Column(
+        children: [
+          Padding(padding : EdgeInsets.symmetric(vertical: 40) ,),
+          Flexible(child:
+          Container(
+            padding: EdgeInsets.symmetric(
+              vertical: 0,
+              horizontal: 40.0
+            ),
+            child:
+              Center(
+                child:
+                  Column(
+                    children: [
+                      Flexible(
+                        child: Card(
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)
+                          ),
+                          child:
+                          Padding(
+                            padding: EdgeInsets.all(14),
+                          child: Image.asset('assets/image/Icon.png',
+                            height: 200,)
+                            ,) ,
+                        ),
+                      ),
+                      SizedBox(height: 40),
+                      RichText(
+                          textAlign: TextAlign.center,
+                          text:const TextSpan(
+                              children:[
+                                TextSpan(
+                                    text: 'Nices Course\n',
+                                    style: TextStyle(
+                                        fontSize: 45,
+                                        fontWeight: FontWeight.w600
+                                    )
+                                ),
+                                TextSpan(
+                                    text: '\nDiscover all you need to know about IT here',
+                                    style: TextStyle(
+                                        fontSize: 20
+                                    )
+                                )]
+                          )),
+                    ],
+                  ),
+              )
+          )),
+          // Flexible(child: Text('Welcome'))
+          Row(
+            children: [
+              Text('Welcome'),
+              Text('Welcome')
+            ],
+          )
+        ],
+      ),
     );
   }
 }
